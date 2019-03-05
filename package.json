@@ -1,0 +1,18 @@
+{
+  "name": "iban-recognition",
+  "version": "1.0.0",
+  "description": "simple module that recognize iban from text",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "loggy": "^1.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}
