@@ -1,6 +1,7 @@
-const logger = require("loggy");
 const { regex } = require("./regex");
 const { getName } = require("country-list");
+const { isValid } = require("iban");
+const { getCountries, isCountrySupported } = require("./countries");
 const getIbans = textThatHaveIban => {
   let tableToReturn = [];
   let ibans = textThatHaveIban.match(regex);
@@ -8,14 +9,21 @@ const getIbans = textThatHaveIban => {
   if (ibans != null) {
     ibans.forEach(iban => {
       let code = iban.substring(0, 2);
-      tableToReturn.push({ iban: iban, country: getName(code) });
+      let isIbanValid = isValid(iban);
+      tableToReturn.push({
+        iban: iban,
+        country: getName(code),
+        isIbanValid: isIbanValid
+      });
     });
     return tableToReturn;
   } else {
-    return "No iban found";
+    return "iban not found";
   }
 };
 
 module.exports = {
-  getIbans
+  getIbans,
+  getCountries,
+  isCountrySupported
 };

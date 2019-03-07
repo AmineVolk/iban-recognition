@@ -21,11 +21,11 @@ let regex19 =
 let regex20 =
   "(BA|EE|KZ|LT|LU|AT)[0-9A-Z]{2}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}|(BA|EE|KZ|LT|LU|AT)[0-9A-Z]{18}";
 
-// HR == Croatia| LI == liechtenstein| LV == Latvia| CH == Swiss
+// HR == Croatia| LI == liechtenstein | LV == Latvia| CH == Swiss
 let regex21 =
   "(HR|LI|LV|CH)[0-9A-Z]{2}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{1}|(HR|LI|LV|CH)[0-9A-Z]{19}";
 
-// BD == bangladesh | DE == Germany | IE == Ireland | ME == Montenegro | RS == Serbia| GB == Royaume-Uni (Grande-Bretagne)
+// BD == Bangladesh | DE == Germany | IE == Ireland | ME == Montenegro | RS == Serbia| GB == Royaume-Uni (Grande-Bretagne)
 let regex22 =
   "(BG|DE|IE|ME|RS|GB)[0-9A-Z]{2}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{4}[  /-][0-9A-Z]{2}|(BG|DE|IE|ME|RS|GB)[0-9A-Z]{20}";
 
