@@ -1,6 +1,9 @@
 # IBAN-Recognition
 
-iban-recognition allow you to extract iban from any text, and give you the country and iban's validty.
+Iban-recognition allows you to extract an iban from any text and it also gives you more informations such as:
+
+- The country where the iban belongs
+- The iban's validity.
 
 Example :
 
@@ -31,25 +34,25 @@ const ibans = getIbans(testToExtractIbans);
 
 ## To improve
 
-The IBAN is defined differently from one country to another (the length differ), so you should have different regex for each country, i tried to bring together the maximum of country, but there is so much ...
+An IBAN can be defined differently from one country to another, most of them can be distinguish by their length, that's why each country should have a different regex, I tried to gather as much countries as I could, but as you know there's a lot of them so..you can guess the rest.
 
-you can check if your country is supported:
+You can check if your country is supported as follow:
 
 ```js
 const isCountryTaken = isCountrySupported("France");
 // result : True
 ```
 
-And you can help by adding for a country that is not in lib easliy :
+And if you want to help, you can add your country by following these steps:
 
-- add the country to the file countries.js
-- add the regex to recognize him in regex.js
-- run all test to avoid a regression
-- and finally do a PR
+- Add the country to the file countries.js
+- Add the regex to recognize it in regex.js
+- Run all the tests to avoid a regression
+- And finally do a PR
 
 ## Supported countries
 
-you can all supported countries by
+If you want to have the list of supported countries, you should do as follow:
 
 ```js
 const countries = getCountries();

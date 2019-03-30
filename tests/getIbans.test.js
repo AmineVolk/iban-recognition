@@ -1,7 +1,7 @@
 var expect = require("chai").expect;
 const { getIbans } = require("../index");
 describe("Test getIbans when have once iban in the text", () => {
-  it("should return the right iban's list, case1", () => {
+  it("Should return the right iban's list, case1", () => {
     const textToTest = "qsdf DE89 4203 0043 6410 2400 06qsd";
     expect(getIbans(textToTest)).deep.eq([
       {
@@ -12,12 +12,12 @@ describe("Test getIbans when have once iban in the text", () => {
     ]);
   });
 
-  it("should return iban not found when the given text doesn't have any iban", () => {
+  it("Should return iban not found when the given text doesn't have any iban", () => {
     const textToTest = "ajkqdsk q qdfjk q qsd jkqsd f qdf ";
     expect(getIbans(textToTest)).eq("iban not found");
   });
 
-  it("should return the right iban's list, case1", () => {
+  it("Should return the right iban's list, case1", () => {
     const textToTest = "qsdf FR76 3000 6000 0112 3456 7890 189 qsd";
     expect(getIbans(textToTest)).deep.eq([
       {
@@ -28,14 +28,14 @@ describe("Test getIbans when have once iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case2", () => {
+  it("Should return the right iban's list, case2", () => {
     const textToTest = "qsdfBE62 6200 0264 2062 qsdf qsfqsd";
     expect(getIbans(textToTest)).deep.eq([
       { iban: "BE62 6200 0264 2062", country: "Belgium", isIbanValid: false }
     ]);
   });
 
-  it("should return the right iban's list, case3", () => {
+  it("Should return the right iban's list, case3", () => {
     const textToTest =
       "aaaqjklqkqdkjkqs qsdf qsdf  BG80 BNBG 9662 2020 4366 28 qsd qjkqdfsjklqdsf jklqfjm qdsfl";
 
@@ -48,7 +48,7 @@ describe("Test getIbans when have once iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case4", () => {
+  it("Should return the right iban's list, case4", () => {
     const textToTest = "CY26224642894268966222462489 qsd";
     expect(getIbans(textToTest)).deep.eq([
       {
@@ -59,7 +59,7 @@ describe("Test getIbans when have once iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case5", () => {
+  it("Should return the right iban's list, case5", () => {
     const textToTest = "qsdfCH56 0483 5012 3456 7800 9qsd";
 
     expect(getIbans(textToTest)).deep.eq([
@@ -71,14 +71,14 @@ describe("Test getIbans when have once iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case6", () => {
+  it("Should return the right iban's list, case6", () => {
     const textToTest = "aaDK60-0040-0440-2262-44 qsd";
     expect(getIbans(textToTest)).deep.eq([
       { iban: "DK60-0040-0440-2262-44", country: "Denmark", isIbanValid: false }
     ]);
   });
 
-  it("should return the right iban's list, case7", () => {
+  it("Should return the right iban's list, case7", () => {
     const textToTest = "iban : DE89 3704 0044 0532 0130 00aer', // ok";
     expect(getIbans(textToTest)).deep.eq([
       {
@@ -89,7 +89,7 @@ describe("Test getIbans when have once iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case8", () => {
+  it("Should return the right iban's list, case8", () => {
     const textToTest = "iban : BE71-0961-2345-6769aer', // ok";
     expect(getIbans(textToTest)).deep.eq([
       { iban: "BE71-0961-2345-6769", country: "Belgium", isIbanValid: true }
@@ -105,7 +105,7 @@ describe("test getIbans when have a lot iban in the text", () => {
   const textToTest3 =
     "AL35 2021 1109 0000 0000 0123 4567 qs sdf f   q s s SE46 6000 1111 0639 2000 0004000 0000 ";
 
-  it("should return the right iban's list, case1", () => {
+  it("Should return the right iban's list, case1", () => {
     expect(getIbans(textToTest1)).deep.eq([
       {
         iban: "DE91100000000123456789",
@@ -121,7 +121,7 @@ describe("test getIbans when have a lot iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case2", () => {
+  it("Should return the right iban's list, case2", () => {
     expect(getIbans(textToTest2)).deep.eq([
       {
         iban: "FR7630006000011234567890189",
@@ -141,7 +141,7 @@ describe("test getIbans when have a lot iban in the text", () => {
     ]);
   });
 
-  it("should return the right iban's list, case3", () => {
+  it("Should return the right iban's list, case3", () => {
     expect(getIbans(textToTest3)).deep.eq([
       {
         iban: "AL35 2021 1109 0000 0000 0123 4567",
