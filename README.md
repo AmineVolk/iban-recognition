@@ -1,5 +1,9 @@
 # IBAN-Recognition
 
+[![GitHub version](https://badge.fury.io/gh/AmineVolk%2Fiban-recognition.svg)](https://badge.fury.io/gh/AmineVolk%2Fiban-recognition)
+[![npm version](https://badge.fury.io/js/iban-recognition.svg)](https://badge.fury.io/js/iban-recognition)
+[![Codecov Coverage](https://img.shields.io/codecov/c/github/AmineVolk/iban-recognition/master.svg?style=flat-square)](https://codecov.io/gh/<AmineVolk>/iban-recognition/)
+
 Iban-recognition allows you to extract an iban from any text and it also gives you more informations such as:
 
 - The country where the iban belongs
