@@ -46,12 +46,12 @@ const countries = [
   "Lebanon",
   "Poland",
   "Maurice",
-  "Malta"
+  "Malta",
 ];
 const getCountries = () => {
   return countries;
 };
-const isCountrySupported = name => {
+const isCountrySupported = (name) => {
   return countries.includes(name);
 };
 
