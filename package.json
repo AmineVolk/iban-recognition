@@ -28,5 +28,8 @@
     "recognition",
     "js",
     "extract"
-  ]
+  ],
+  "publishConfig":{ 
+    "registry": "https://npm.pkg.github.com/@AmineVolk" 
+  }
 }
